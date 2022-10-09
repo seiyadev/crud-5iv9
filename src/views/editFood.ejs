@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <title>CRUD Bellako</title>
+    </head>
+    <body style="color: white; background-color: #1d2630">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <div class="container mt-5">
+            <div class="main row justify-content-center">
+                <form action="/update/<%=data.id%>" method="post" id="food-formt"
+                    class="row
+                    justify-content-center mb-4"
+                    autocomplete="off">
+                    <div class="col-5 mb-3">
+                        <label for="name_alimento">Alimento</label>
+                        <input class="form-control"
+                            id="name_alimento"
+                            name="name_alimento"
+                            type="text" placeholder="Nombre" value="<%=data.alimento%>" required>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label for="name_alimento">Peso(g)</label>
+                        <input class="form-control"
+                            id="int_peso"
+                            name="int_peso"
+                            type="number" placeholder="Peso(g)" value="<%=data.peso%>" required>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label for="int_calorias">Calorías</label>
+                        <input class="form-control"
+                            id="int_calorias"
+                            name="int_calorias"
+                            type="number"
+                            placeholder="Calorías"
+                            value="<%=data.calorias%>" required>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label for="int_proteinas">Proteínas(g)</label>
+                        <input class="form-control"
+                            id="int_proteinas"
+                            name="int_proteinas"
+                            type="number"
+                            placeholder="Proteínas(g)"
+                            value="<%=data.proteinas%>"  required>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label for="int_carbohidratos">Carbohidratos(g)</label>
+                        <input class="form-control"
+                            id="int_carbohidratos"
+                            name="int_carbohidratos"
+                            type="number"
+                            placeholder="Carbohidratos(g)" 
+                            value="<%=data.carbohidratos%>" required>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label for="int_grasas">Grasas(g)</label>
+                        <input class="form-control"
+                            id="int_grasas"
+                            name="int_grasas"
+                            type="number" placeholder="Grasas" 
+                            value="<%=data.grasas%>" required>
+                    </div>
+                    <div class="col-3 m-4">
+                        <input class="btn btn-success add-btn"
+                            type="submit"
+                            value="Editar alimento">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
